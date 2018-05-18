@@ -7,6 +7,7 @@
             <div class="form-control" class="principal">
                 <h1>Formulário de cadastro</h1>
                 <form action="adiciona-produto.php">
+                    <div>Codigo: <input class="id form-control" type="text" name="nome" disabled="disabled"/></div>
                     <div>Nome: <input class="nome form-control" type="text" name="nome" /></div>
                     <div>Preço: <input class="preco form-control" type="number" name="preco" /></div>
                     <!-- <div>Bateria <meter  type="meter" min="0" max="100" low="15" value="12" />12 </div>
@@ -14,7 +15,7 @@
                     <div>Carregando<input type="color" name="cor"/></div>
                     <div>Carregando<input type="search" name="busca"/></div> -->
                     </br>
-                    <div><button class="cadastrar btn btn-success" type="submit"/>Cadastrar </button> 
+                    <div><button class="salvar btn btn-success" type="submit"/>Salvar </button> 
                         <button id="button-ajax" class="btn btn-success" type="submit"/>Listar Produtos </button>
                     </div>
                     
@@ -34,7 +35,8 @@
         </div>
 
         <script src="js/jquery-3.3.1.js"></script>
-        <script src="js/adicionaProduto.js"></script>
+        <script src="js/editarProduto.js"></script>
+        <script src="js/salvarProduto.js"></script>
         <script src="js/listarProdutos.js"></script>
         <script src="js/removerProduto.js"></script>
         

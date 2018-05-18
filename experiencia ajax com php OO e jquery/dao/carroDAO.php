@@ -3,18 +3,31 @@ include("model/carro.php");
 
 class carroDAO{
 	
-	public function adiciona($carro){
+	public function salva($carro){
 		$conexao = mysqli_connect('localhost', 'root', '', 'loja');	
-		$query = "INSERT INTO produtos 
-			(
-				nome, 
-				preco
-			)
-			VALUES
-			(
-				'{$carro->getNome()}', 
-				{$carro->getPreco()}
-			)";
+		$query = '';
+		
+		if($carro->getId() == ''){
+			$query = "INSERT INTO produtos 
+				(
+					nome, 
+					preco
+				)
+				VALUES
+				(
+					'{$carro->getNome()}', 
+					{$carro->getPreco()}
+				)";
+				echo "Produto cadastrado com sucesso";
+		}else{
+			$query = "UPDATE produtos
+						SET
+							nome = '{$carro->getNome()}',
+							preco = {$carro->getPreco()}
+						WHERE
+							id = {$carro->getId()}";
+			echo "Produto atualizado com sucesso!";
+		}
 
 		mysqli_query($conexao, $query);
 	}
