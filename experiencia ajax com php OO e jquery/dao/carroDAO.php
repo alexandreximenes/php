@@ -18,7 +18,8 @@ class carroDAO{
 					'{$carro->getNome()}', 
 					{$carro->getPreco()}
 				)";
-				echo "Produto cadastrado com sucesso";
+			mysqli_query($conexao, $query);
+			echo mysqli_insert_id($conexao);
 		}else{
 			$query = "UPDATE produtos
 						SET
@@ -26,10 +27,12 @@ class carroDAO{
 							preco = {$carro->getPreco()}
 						WHERE
 							id = {$carro->getId()}";
-			echo "Produto atualizado com sucesso!";
+			mysqli_query($conexao, $query);
+			echo $carro->getId();
 		}
 
-		mysqli_query($conexao, $query);
+		
+		
 	}
 
 	public function listarProdutos(){
@@ -41,7 +44,9 @@ class carroDAO{
 							nome, 
 							preco
 					FROM
-							produtos";
+							produtos
+					ORDER BY id
+					DESC";
 							
 			$resultado = mysqli_query($conexao, $query);
 
@@ -68,7 +73,8 @@ class carroDAO{
 					FROM produtos 
 				WHERE 
 					id= {$carro->getId()}";
-		
+		var_dump($query);
+
 		mysqli_query($conexao, $query);
 	}
 }

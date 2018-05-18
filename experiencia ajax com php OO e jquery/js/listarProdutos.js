@@ -5,22 +5,23 @@ $(function(){
         buscarDadosNoServidor();
     });  
  }); 
-var linha;
+let linha;
+let corpoTabela = $("#table-produto tbody");
 function buscarDadosNoServidor(){
     var url = "./listaTodosProdutos.php";
-
+    corpoTabela.html('');
     $.get(url, function(data){
         $("#table-produto").show();
-        
         data.map(produto => {
             let tr = criaTr(produto);
-            $("#table-produto tbody").append(tr);
+            corpoTabela.append(tr);
         });
         
     });
 }
 
 function criaTr(produto){
+
     let linha = $('<tr>');
         var tdId = $('<td>').addClass('produto-id').text(produto.id);
         var tdNome = $("<td>").text(produto.nome);

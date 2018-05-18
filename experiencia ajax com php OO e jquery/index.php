@@ -1,8 +1,7 @@
 <?php include("cabecalho.php"); ?>
+<!-- <?php include("menu.php"); ?> -->
 
     <body>
-        <?php include("menu.php"); ?>
-        
         <div class="container">
             <div class="form-control" class="principal">
                 <h1>Formulário de cadastro</h1>
@@ -35,6 +34,11 @@
         </div>
 
         <script src="js/jquery-3.3.1.js"></script>
+        <script>
+            $(function(){
+                buscarDadosNoServidor();
+            });
+        </script>
         <script src="js/editarProduto.js"></script>
         <script src="js/salvarProduto.js"></script>
         <script src="js/listarProdutos.js"></script>

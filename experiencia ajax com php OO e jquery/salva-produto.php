@@ -9,8 +9,4 @@
     
     $dao = new carroDAO();
     
-    if($dao->salva($carro)):
-        return json_encode('sucesso');
-    else:
-        return json_encode('falha');
-    endif;
+    $dao->salva($carro);

@@ -1,3 +1,5 @@
+let produto;
+
 $(function(){
 	$('.salvar').click(function(event){
 		event.preventDefault();
@@ -10,16 +12,24 @@ function salvaProduto(){
 	var vNome = $('.nome').val();
 	var vPreco = $('.preco').val();
 
-	var produto = {
+	produto = {
 		id: vId,
 		nome: vNome,
 		preco: vPreco
 	};
-	//console.log(produto);
+	
+	
 
 	var url = "salva-produto.php";
 	$.post(url, produto)
-		.done(resultado => alert(resultado))
+		.done(resultado => {
+			alert(resultado);
+			produto.id = resultado;
+			let linhaTr = criaTr(produto);
+			
+			//$("#table-produto tbody").prepend(linhaTr);	
+			buscarDadosNoServidor();		
+		})
 		.fail(resultado => alert(resultado));
 
 }
