@@ -9,9 +9,9 @@ let linha;
 let corpoTabela = $("#table-produto tbody");
 function buscarDadosNoServidor(){
     var url = "./listaTodosProdutos.php";
-    corpoTabela.html('');
     $.get(url, function(data){
         $("#table-produto").show();
+        corpoTabela.html('');
         data.map(produto => {
             let tr = criaTr(produto);
             corpoTabela.append(tr);

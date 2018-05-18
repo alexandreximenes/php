@@ -1,5 +1,5 @@
 <?php include("cabecalho.php"); ?>
-<!-- <?php include("menu.php"); ?> -->
+<?php include("menu.php"); ?>
 
     <body>
         <div class="container">
@@ -19,7 +19,8 @@
                     </div>
                     
                 </form>
-                <div>
+                <br/>
+                <div class="container">
                     <table id="table-produto" class="table">
                         <thead>
                             <th>CODIGO</th>
@@ -29,6 +30,7 @@
                         </thead>
                         <tbody></tbody>
                     </table>
+
                 </div>
             </div>
         </div>
