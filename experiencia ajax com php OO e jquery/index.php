@@ -25,6 +25,7 @@
                             <th>CODIGO</th>
                             <th>PRODUTO</th>
                             <th>PRECO</th>
+                            <th>AÇÕES</th>
                         </thead>
                         <tbody></tbody>
                     </table>
@@ -32,9 +33,11 @@
             </div>
         </div>
 
-        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-        <script type="text/javascript" src="js/listarProdutos.js"></script>
-        <script type="text/javascript" src="js/cadastrarProdutos.js"></script>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/adicionaProduto.js"></script>
+        <script src="js/listarProdutos.js"></script>
+        <script src="js/removerProduto.js"></script>
+        
     </body>
 
 <?php include("rodape.php"); ?>

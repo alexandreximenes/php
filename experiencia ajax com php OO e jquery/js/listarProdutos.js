@@ -5,42 +5,51 @@ $(function(){
         buscarDadosNoServidor();
     });  
  }); 
-
+var linha;
 function buscarDadosNoServidor(){
     var url = "./listaTodosProdutos.php";
+
     $.get(url, function(data){
         $("#table-produto").show();
-        $.each(data, function(i, produto){
-            $("#table-produto tbody").append(
-                "<tr>"+
-                    "<td>"+ produto.id + "</td>"+
-                    "<td>" + produto.nome +"</td>"+
-                    "<td>"+ produto.preco +"</td>"+
-                "</tr>"
-            );
-        })
+        
+        data.map(d => {
+            linha = $('<tr>');
+            var tdId = $('<td>').addClass('produto-id').text(d.id);
+            var tdNome = $('<td>').text(d.nome);
+            var tdPreco = $('<td>').text(d.preco);
+            var colunaAcao = $('<td>');
+            var linkRemover = $('<a>').addClass('remover-produto').attr('href', '#').text('remover');
+            var linkEditar = $('<a>').addClass('editar-produto').attr('href', '#').text('editar');
 
-    });
-                    // $(".dados").append(produto.id +" - "+ produto.nome + " "+produto.preco+ "</br>");
+            colunaAcao.append(linkRemover);
+            colunaAcao.append(" | ");
+            colunaAcao.append(linkEditar);
+
+            linha.append(tdId);
+            linha.append(tdNome);
+            linha.append(tdPreco);
+            linha.append(colunaAcao);
             
-                    // for(var i = 0;i < data.length; i++){
-                    //     $(".dados").append(data[i].id +" "+ data[i].nome + " "+data[i].preco+ "</br>");
-                        
-                    // }
-         
-                // $.ajax({
-                //     url,
-                //     method: "GET",
-                //     dataType: "json"
-                // }).done(function(data){
-                //     $.each(data, function(i, produto){
-                //         console.log(produto.nome);
-                //         $('').html(data.id);
-                //     });
-                // }).fail(function(){
-                //     console.log("falhou");
-                // });
-            }
+            linha.find('.remover-produto').click(removeLinha);
+            linha.find(".editar-produto").click(editaLinha);
+
+            $("#table-produto tbody").append(linha);
+        });
+        
+    });
+}
+
+
+
+function editaLinha() {
+    event.preventDefault();
+    var linha = $(this).parent().parent();
+
+    linha.fadeOut(1000);
+    setTimeout(function () {
+        linha.remove();
+    }, 1000);
+}
                
         
         

@@ -2,13 +2,10 @@
     include("dao/carroDAO.php");
 
     $carro = new Carro();
-
-    $carro->setNome($_POST['nome']);
-    $carro->setPreco($_POST['preco']);
-    
+    $carro->setId( (int) $_POST['id']) );
     $dao = new carroDAO();
     
-    if($dao->adiciona($carro)):
+    if($dao->remove($carro):
         return json_encode('sucesso');
     else:
         return json_encode('falha');

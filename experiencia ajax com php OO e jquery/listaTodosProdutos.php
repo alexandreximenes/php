@@ -1,22 +1,23 @@
 <?php include("dao/carroDAO.php");
 
-$carroDAO = new carroDAO();
+$dao = new carroDAO();
 
-$produtos = $carroDAO->listarProdutosJson();
+$produtos = $dao->listarProdutosJson();
 
 echo $produtos;
 
+//var_dump($produtos);
+
 // $produtosLista = json_decode($carroDAO->listarProdutosJson(), true);
 
-// foreach($produtosLista as $produto):
+// foreach($produtos as $produto):
 // 	echo "(" . $produto['id'] . ") - " . $produto['nome'] . " - " . $produto['preco'];
 // endforeach;
 
-//$produtos = json_decode($carroDAO->produtosr(), true);
+//$produtos = json_decode($carroDAO->produtos(), true);
 
 // echo json_encode($produtos);
 
-// // var_dump($produtos);
 
 // // die();
 

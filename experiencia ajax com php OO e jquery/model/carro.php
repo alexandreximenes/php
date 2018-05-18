@@ -1,14 +1,18 @@
 <?php
 
 class carro{
+	private $id;
 	private $nome;
 	private $preco;
 
-	// public function __construct($nome, $preco){
-	// 	$this->nome = $nome;
-	// 	$this->preco = $preco;
-	// }
+	public function getId(){
+		return $this->id;
+	}
 
+	public function setId($id){
+		$this->id = $id;
+	}
+	
 	public function getNome(){
 		return $this->nome;
 	}
