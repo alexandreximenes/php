@@ -26,6 +26,9 @@
             <a class="nav-link" href="index.php">Adiciona Produto</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="produtos.php">Produtos</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link disabled" href="sobre.php">Sobre</a>
           </li>
           <li class="nav-item dropdown">

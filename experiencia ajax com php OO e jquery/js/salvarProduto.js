@@ -23,12 +23,12 @@ function salvaProduto(){
 	var url = "salva-produto.php";
 	$.post(url, produto)
 		.done(resultado => {
-			alert(resultado);
+			//alert(resultado);
 			produto.id = resultado;
 			let linhaTr = criaTr(produto);
 			
 			//$("#table-produto tbody").prepend(linhaTr);	
-			buscarDadosNoServidor();		
+			buscarUltimosAdd();
 		})
 		.fail(resultado => alert(resultado));
 
