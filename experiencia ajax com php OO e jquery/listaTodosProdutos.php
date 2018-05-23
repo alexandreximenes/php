@@ -1,6 +1,6 @@
-<?php include("dao/carroDAO.php");
+<?php include("dao/produtoDAO.php");
 
-$dao = new carroDAO();
+$dao = new produtoDAO();
 
 $produtos = $dao->listarProdutosJson();
 

@@ -2,22 +2,38 @@ $(function(){
     $("#table-produto").hide();
     $('#button-ajax').click(function(event){
         event.preventDefault();
-        buscarDadosNoServidor();
     });  
  }); 
+
 let linha;
+let url;
 let corpoTabela = $("#table-produto tbody");
+
 function buscarDadosNoServidor(){
-    var url = "./listaTodosProdutos.php";
+    url = "./listaTodosProdutos.php";
     $.get(url, function(data){
-        $("#table-produto").show();
-        corpoTabela.html('');
+        console.log(data);
+        mostraTabela();
         data.map(produto => {
-            let tr = criaTr(produto);
-            corpoTabela.append(tr);
+            corpoTabela.append(criaTr(produto));
         });
-        
     });
+}
+
+function buscarUltimosAdd(){
+    url = "./buscarUltimosAdd.php";
+    $.get(url, function(resp){
+        console.log(resp);
+        mostraTabela();
+        resp.map(produto => {
+            corpoTabela.append(criaTr(produto));
+        });
+    });
+}
+
+function mostraTabela(){
+    $("#table-produto").show();
+    corpoTabela.html('');
 }
 
 function criaTr(produto){

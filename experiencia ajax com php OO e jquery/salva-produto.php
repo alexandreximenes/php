@@ -1,12 +1,12 @@
 <?php 
-    include("dao/carroDAO.php");
+    include("dao/produtoDAO.php");
 
-    $carro = new Carro();
+    $produto = new produto();
     
-    $carro->setId((int) $_POST['id']);
-    $carro->setNome($_POST['nome']);
-    $carro->setPreco($_POST['preco']);
+    $produto->setId((int) $_POST['id']);
+    $produto->setNome($_POST['nome']);
+    $produto->setPreco($_POST['preco']);
     
-    $dao = new carroDAO();
+    $dao = new produtoDAO();
     
-    $dao->salva($carro);
+    $dao->salva($produto);

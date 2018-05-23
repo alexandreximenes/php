@@ -1,8 +1,8 @@
 <?php 
-    include("dao/carroDAO.php");
+    include("dao/produtoDAO.php");
 
-    $carro = new Carro();
-    $carro->setId( (int) $_POST['id'] );
-    $dao = new carroDAO();
+    $produto = new produto();
+    $produto->setId( (int) $_POST['id'] );
+    $dao = new produtoDAO();
     
-    $dao->remove($carro);
+    $dao->remove($produto);
