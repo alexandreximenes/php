@@ -5,8 +5,8 @@
         <!-- Bootstrap CSS -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="css/estilo.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link href="../css/estilo.css" rel="stylesheet" />
         <title>Bem vindo</title>
     </head>
 <body>
@@ -26,7 +26,7 @@
             <a class="nav-link" href="index.php">Adiciona Produto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="produtos.php">Produtos</a>
+            <a class="nav-link" href="./produtos.php">Produtos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="sobre.php">Sobre</a>
@@ -36,6 +36,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdown03">
               <a class="dropdown-item" href="index.php">Home</a>
               <a class="dropdown-item" href="index.php">Adicionar produto</a>
+              <a class="dropdown-item" href="./produtos.php">listar produto</a>
               <a class="dropdown-item" href="#" disabled>sobre</a>
             </div>
           </li>

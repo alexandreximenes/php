@@ -1,4 +1,4 @@
-<?php include("dao/produtoDAO.php");
+<?php include("../dao/produtoDAO.php");
 
 $dao = new produtoDAO();
 

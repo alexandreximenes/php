@@ -1,5 +1,5 @@
 <?php
-include("dao/produtoDAO.php");
+include("../dao/produtoDAO.php");
 
 $dao = new produtoDAO();
 

@@ -1,11 +1,11 @@
-<?php include("cabecalho.php"); ?>
+<?php include("./cabecalho.php"); ?>
 
         <div class="container">
             <div class="form-control" class="principal">
                 <h1>Formulário de cadastro</h1>
                 <form action="adiciona-produto.php">
                     <div class="row">
-                        <div class="col-md-2 mb-3">Codigo: <input class="id form-control" type="text" name="nome" disabled="disabled"/></div>
+                        <div class="col-md-2 mb-3">Codigo: <input class="id form-control" type="text" name="id" disabled="disabled"/></div>
                         <div class="col-md-7 mb-3">Nome: <input class="nome form-control" type="text" name="nome" autofocus/></div>
                         <div  class="col-md-3 mb-3">Preço: <input class="preco form-control" type="number" name="preco" /></div>
                     </div>
@@ -21,12 +21,12 @@
                 </form>
                 <br/>
                 
-                <?php include("tabela.php");?>
+                <?php include("./tabela.php");?>
 
             </div>
         </div>
 
-        <?php include("rodape.php"); ?>
+        <?php include("./rodape.php"); ?>
         
         <script>
             $(function(){
@@ -34,10 +34,10 @@
             });
         </script>
 
-        <script src="js/editarProduto.js"></script>
-        <script src="js/salvarProduto.js"></script>
-        <script src="js/listarProdutos.js"></script>
-        <script src="js/removerProduto.js"></script>
+        <script src="../js/editarProduto.js"></script>
+        <script src="../js/salvarProduto.js"></script>
+        <script src="../js/listarProdutos.js"></script>
+        <script src="../js/removerProduto.js"></script>
         
     </body>
 

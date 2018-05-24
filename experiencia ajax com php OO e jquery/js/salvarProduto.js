@@ -20,7 +20,7 @@ function salvaProduto(){
 	
 	
 
-	var url = "salva-produto.php";
+	var url = "./salva-produto.php";
 	$.post(url, produto)
 		.done(resultado => {
 			//alert(resultado);

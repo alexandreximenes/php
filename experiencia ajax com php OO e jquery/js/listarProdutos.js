@@ -2,6 +2,7 @@ $(function(){
     $("#table-produto").hide();
     $('#button-ajax').click(function(event){
         event.preventDefault();
+        buscarDadosNoServidor();
     });  
  }); 
 

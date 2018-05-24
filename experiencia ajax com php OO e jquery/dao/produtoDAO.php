@@ -1,5 +1,5 @@
 <?php 
-include("model/produto.php");
+include("../model/produto.php");
 
 class produtoDAO{
 	

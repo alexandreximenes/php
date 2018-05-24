@@ -8,7 +8,7 @@
                         </thead>
                         <tbody></tbody>
                     </table>
-                            <a class="ver-mais" href="produtos.php" aria-label="Left Align">ver mais produtos
+                            <a class="ver-mais" href="./produtos.php" aria-label="Left Align">ver mais produtos
                                 <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true" />
                             </a>
                     
