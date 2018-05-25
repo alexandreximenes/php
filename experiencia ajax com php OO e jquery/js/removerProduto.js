@@ -3,10 +3,10 @@ function removeLinha() {
     var linha = $(this).closest('tr');
     var id = linha.find('td:nth-child(1)').text();
     removeProduto(id);
-    linha.fadeOut(1000);
+    linha.fadeOut(300);
     setTimeout(function () {
         linha.remove();
-    }, 1000);
+    }, 300);
 }
 
 function removeProduto(id) {

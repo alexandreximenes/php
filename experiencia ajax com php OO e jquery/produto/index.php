@@ -3,6 +3,19 @@
         <div class="container">
             <div class="form-control" class="principal">
                 <h1>Formulário de cadastro</h1>
+                
+                <div class="alert alert-dismissible fade show" role="alert">
+                    <h4 class="alert-heading"></h4>
+                    <hr>
+                    <p class="mensagem-body"></p>
+                    <hr>
+                    <p class="mensagem-footer mb-0"></p>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                
+                </div>
+                
                 <form method="POST">
                     <div class="row">
                         <div class="col-md-2 mb-3">Codigo: <input class="id form-control" type="text" name="id" disabled="disabled"/></div>
@@ -34,6 +47,7 @@
             });
         </script>
 
+        <script src="../js/mensagem.js"></script>
         <script src="../js/editarProduto.js"></script>
         <script src="../js/salvarProduto.js"></script>
         <script src="../js/listarProdutos.js"></script>
